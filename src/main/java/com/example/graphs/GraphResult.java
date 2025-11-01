@@ -8,7 +8,7 @@ public class GraphResult {
     public List<List<Integer>> sccList;         
     public List<List<Edge>> condGraph;          
     public List<Integer> topoOrder;             
-    public dagSP.DAGResult shortestPath;        
-    public dagSP.DAGResult longestPath;    
+    public dagP.DAGResult shortestPath;        
+    public dagP.DAGResult longestPath;    
 }
 
