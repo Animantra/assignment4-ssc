@@ -2,7 +2,7 @@ package com.example.graphs;
 
 
 import java.util.List;
-import com.example.dagP;
+import com.example.dagP.*;
 
 public class GraphResult {
     public List<List<Integer>> sccList;         
