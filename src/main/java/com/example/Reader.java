@@ -4,6 +4,7 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.example.dagP;
 import com.example.graphs.Edge;
 import com.example.graphs.Graph;
 import com.example.graphs.GraphCont;
@@ -29,8 +30,8 @@ public class Reader {
                 List<Integer> topoOrder = KahnAlgo.kahnAlgo(condGraph,g,sccList, metrics);
 
                 int source = g.getSource();
-                dagSP.DAGResult spResult = dagSP.sp(topoOrder, condGraph, source, metrics);
-                dagSP.DAGResult lpResult = dagSP.lp(topoOrder, condGraph, source, metrics);
+                dagP.DAGResult spResult = dagP.sp(topoOrder, condGraph, source, metrics);
+                dagP.DAGResult lpResult = dagP.lp(topoOrder, condGraph, source, metrics);
 
                 GraphResult result = new GraphResult();
                 result.sccList = sccList;
