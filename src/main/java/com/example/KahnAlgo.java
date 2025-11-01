@@ -12,8 +12,6 @@ public class KahnAlgo {
    
     public static List<Integer> kahnAlgo(List<List<Edge>> condGraphWeighted,Graph g,List<List<Integer>> sccList,Metrics metrics){
 
-        metrics.startTimer();
-
         int n = condGraphWeighted.size();
         int[] indeg = new int[n];
 

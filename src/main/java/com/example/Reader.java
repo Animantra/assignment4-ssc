@@ -20,19 +20,21 @@ public class Reader {
 
             List<Graph> graphs = cont.getGraphs();
             List<GraphResult> results = new ArrayList<>();
+            List<Metrics> metricsList = new ArrayList<>();
 
             for(Graph g:graphs){
 
                 Metrics metrics = new Metrics();
+                metrics.startTimer();
                 List<List<Integer>> sccList = KosarajuAlgo.kosarajuAlgo(g.getN(), g, metrics);
                 List<List<Edge>> condGraph = ToCondGraph.toCondGraphWeighted(sccList, g);
-
                 List<Integer> topoOrder = KahnAlgo.kahnAlgo(condGraph,g,sccList, metrics);
-
                 int source = g.getSource();
                 dagP.DAGResult spResult = dagP.sp(topoOrder, condGraph, source, metrics);
                 dagP.DAGResult lpResult = dagP.lp(topoOrder, condGraph, source, metrics);
 
+                metrics.stopTimer();
+                
                 GraphResult result = new GraphResult();
                 result.sccList = sccList;
                 result.condGraph = condGraph;
@@ -41,10 +43,11 @@ public class Reader {
                 result.longestPath = lpResult;
 
                 results.add(result);
-
+                metricsList.add(metrics);
 
             }
             Writer.writeGraphResult("data/results.json", results);
+            
 
         }
         catch (Exception e) {

@@ -23,8 +23,6 @@ public class KosarajuAlgo {
         boolean[] visited = new boolean[n];
         Stack<Integer> st = new Stack<>();
 
-        metrics.startTimer();
-
         for(int i = 0;i < n;i++){
             if(!visited[i]){
                 dfs1(i,graph,visited,st,metrics);
@@ -48,7 +46,6 @@ public class KosarajuAlgo {
             }
         }
 
-        metrics.stopTimer();
         return sccList;
     } 
     public static void dfs1(int v,List<List<Integer>> graph,boolean[] visited, Stack<Integer> st, Metrics metrics){
