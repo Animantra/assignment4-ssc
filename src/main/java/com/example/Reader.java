@@ -4,6 +4,7 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 
+
 import com.example.dagP;
 import com.example.graphs.Edge;
 import com.example.graphs.Graph;
@@ -20,7 +21,7 @@ public class Reader {
 
             List<Graph> graphs = cont.getGraphs();
             List<GraphResult> results = new ArrayList<>();
-            
+
             for(Graph g:graphs){
 
                 Metrics metrics = new Metrics();
@@ -41,6 +42,7 @@ public class Reader {
                 result.longestPath = lpResult;
 
                 results.add(result);
+
 
             }
             Writer.writeGraphResult("data/results.json", results);

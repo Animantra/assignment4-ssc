@@ -29,5 +29,5 @@ public class Graph {
     public String getWeight_model() {
         return weight_model;
     }
-     
+    
 }

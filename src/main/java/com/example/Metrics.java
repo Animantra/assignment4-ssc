@@ -18,7 +18,8 @@ public class Metrics {
     }
 
     public double time(){
-        return (endTime - startTime) / 100000.0;
+        return (endTime - startTime) / 1_000_000.0;
+
     }
 
     public void incDfsVisits() {
