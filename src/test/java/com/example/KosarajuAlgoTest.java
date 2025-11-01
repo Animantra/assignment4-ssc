@@ -4,7 +4,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import com.example.graphs.Edge;
 import com.example.graphs.Graph;
 import org.junit.jupiter.api.Test;
