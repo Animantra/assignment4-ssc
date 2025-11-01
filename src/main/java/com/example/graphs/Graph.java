@@ -29,9 +29,5 @@ public class Graph {
     public String getWeight_model() {
         return weight_model;
     }
-
-    public String toString() {
-        return "Graph{n=" + n + ", directed=" + directed + ", edges=" + (edges != null ? edges.size() : 0) + "}";
-    }
      
 }
