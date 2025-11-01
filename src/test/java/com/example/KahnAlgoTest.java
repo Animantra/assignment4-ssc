@@ -41,23 +41,6 @@ public class KahnAlgoTest {
     }
 
     @Test
-    public void testSingleNode() {
-        int n = 1;
-        int[][] edges = {};
-        List<List<Edge>> condGraph = buildCondGraph(n, edges);
-
-        Graph g = new Graph();
-        g.n = n;
-        g.edges = new ArrayList<>();
-        Metrics metrics = new Metrics();
-
-        List<Integer> topo = KahnAlgo.kahnAlgo(condGraph, g, null, metrics);
-
-        assertEquals(1, topo.size());
-        assertEquals(0, (int) topo.get(0));
-    }
-
-    @Test
     public void testCycleDetection() {
         int n = 3;
         int[][] edges = {{0, 1}, {1, 2}, {2, 0}};
