@@ -25,6 +25,9 @@ Time Complexity: O(V+E)
 
 
 <h3>Conclusion
-Kosaraju: uses for finding SCC in directed graphs. Requires 2 DFS passes, recursion 
-Kahn Sort: uses for build DAG topological order, fails on cyclic graphs
-DAG SP/LP: uses to compute shortest and longest paths in DAG, based on source 
+
+- Kosaraju: uses for finding SCC in directed graphs. Requires 2 DFS passes, recursion 
+
+- Kahn Sort: uses for build DAG topological order, fails on cyclic graphs
+
+- DAG SP/LP: uses to compute shortest and longest paths in DAG, based on source 
