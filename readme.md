@@ -16,13 +16,15 @@
 <h3>Analysis
 
 - SCC(Kosaraju): Time complexity O(V + E), same time complexity with Tarjan's algorithm. Kosaraju uses 2 traversal DFS. 
-Bottleneck: Large SCCs increase DFS calls
+Bottleneck: Large SCCs increase DFS calls, recursion depth
 
 - Topo Sorting(Kahn): Uses in-degree counting and queue. Fails if the graph contains cycles
+Time Complexity: O(V+E) 
 
-- DAG Paths: O(V + E), using topo order, relies on DAG.
+- DAG Paths: O(V + E), traverse DAG in topological order, relaxing edges. 
+
 
 <h3>Conclusion
-Kosaraju: uses for finding SCC in directed graphs. 
-Kahn Sort: uses for build DAGs
-DAG SP/LP: uses for find shortest and longest paths in DAG, based on source 
+Kosaraju: uses for finding SCC in directed graphs. Requires 2 DFS passes, recursion 
+Kahn Sort: uses for build DAG topological order, fails on cyclic graphs
+DAG SP/LP: uses to compute shortest and longest paths in DAG, based on source 
